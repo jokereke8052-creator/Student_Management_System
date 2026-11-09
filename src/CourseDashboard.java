@@ -4,6 +4,7 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.io.IOException;
 
+// Emerald Green theme version
 public class CourseDashboard extends JFrame {
 
     // Application service
@@ -22,10 +23,10 @@ public class CourseDashboard extends JFrame {
     private JTextField searchField;
 
     // Application colours
-    private final Color SIDEBAR_COLOR = new Color(30, 41, 59);
-    private final Color BACKGROUND_COLOR = new Color(245, 247, 250);
-    private final Color ACCENT_COLOR = new Color(37, 99, 235);
-    private final Color TEXT_COLOR = new Color(31, 41, 55);
+    private final Color SIDEBAR_COLOR = new Color(20, 83, 45);
+    private final Color BACKGROUND_COLOR = new Color(240, 253, 244);
+    private final Color ACCENT_COLOR = new Color(22, 163, 74);
+    private final Color TEXT_COLOR = new Color(20, 40, 30);
 
     public CourseDashboard() {
 
@@ -79,7 +80,7 @@ public class CourseDashboard extends JFrame {
         appName.setFont(new Font("SansSerif", Font.BOLD, 17));
 
         JLabel subtitle = new JLabel("Student Management");
-        subtitle.setForeground(new Color(203, 213, 225));
+        subtitle.setForeground(new Color(220, 252, 231));
         subtitle.setFont(new Font("SansSerif", Font.PLAIN, 12));
 
         topPanel.add(appName);
@@ -88,7 +89,7 @@ public class CourseDashboard extends JFrame {
         topPanel.add(Box.createVerticalStrut(45));
 
         JLabel section = new JLabel("MENU");
-        section.setForeground(new Color(148, 163, 184));
+        section.setForeground(new Color(134,  197,  148));
         section.setFont(new Font("SansSerif", Font.BOLD, 11));
 
         topPanel.add(section);
@@ -101,7 +102,7 @@ public class CourseDashboard extends JFrame {
         topPanel.add(overview);
 
         JButton exitButton = new JButton("Exit Application");
-        styleButton(exitButton, new Color(71, 85, 105), Color.WHITE);
+        styleButton(exitButton, new Color(22, 101, 52), Color.WHITE);
         exitButton.addActionListener(e -> dispose());
 
         JPanel bottomPanel = new JPanel(new BorderLayout());
@@ -147,7 +148,7 @@ public class CourseDashboard extends JFrame {
                 "Manage your courses and academic credit units."
         );
         description.setFont(new Font("SansSerif", Font.PLAIN, 13));
-        description.setForeground(new Color(107, 114, 128));
+        description.setForeground(new Color(75, 85, 75));
 
         titlePanel.add(title);
         titlePanel.add(Box.createVerticalStrut(6));
@@ -204,14 +205,14 @@ public class CourseDashboard extends JFrame {
 
         card.setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createLineBorder(
-                        new Color(229, 231, 235)
+                        new Color(220, 252, 231)
                 ),
                 BorderFactory.createEmptyBorder(18, 18, 18, 18)
         ));
 
         JLabel title = new JLabel(heading);
         title.setFont(new Font("SansSerif", Font.PLAIN, 13));
-        title.setForeground(new Color(107, 114, 128));
+        title.setForeground(new Color(75, 85, 75));
 
         JLabel value = new JLabel("0");
         value.setFont(new Font("SansSerif", Font.BOLD, 28));
@@ -234,7 +235,7 @@ public class CourseDashboard extends JFrame {
 
         panel.setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createLineBorder(
-                        new Color(229, 231, 235)
+                        new Color(220, 252, 231)
                 ),
                 BorderFactory.createEmptyBorder(20, 20, 20, 20)
         ));
@@ -256,18 +257,18 @@ public class CourseDashboard extends JFrame {
         searchButton.addActionListener(e -> searchCourse());
 
         JButton clearButton = new JButton("Clear");
-        styleButton(clearButton, new Color(229, 231, 235), TEXT_COLOR);
+        styleButton(clearButton, new Color(220, 252, 231), TEXT_COLOR);
         clearButton.addActionListener(e -> {
             searchField.setText("");
             courseTable.clearSelection();
         });
 
         JButton loadButton = new JButton("Load");
-        styleButton(loadButton, new Color(229, 231, 235), TEXT_COLOR);
+        styleButton(loadButton, new Color(220, 252, 231), TEXT_COLOR);
         loadButton.addActionListener(e -> loadCourses());
 
         JButton saveButton = new JButton("Save");
-        styleButton(saveButton, new Color(229, 231, 235), TEXT_COLOR);
+        styleButton(saveButton, new Color(220, 252, 231), TEXT_COLOR);
         saveButton.addActionListener(e -> saveCourses());
 
         toolbar.add(searchField);
@@ -306,7 +307,7 @@ public class CourseDashboard extends JFrame {
         );
 
         courseTable.getTableHeader().setBackground(
-                new Color(243, 244, 246)
+                new Color(240, 253, 244)
         );
 
         courseTable.getTableHeader().setForeground(TEXT_COLOR);
